@@ -1,5 +1,5 @@
 <?php 
 
 return [
-    'welcome' => 'Welcome, this is SampleUCtitle module.'
+    'welcome' => 'Welcome, this is DummyUCtitle module.'
 ];

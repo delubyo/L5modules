@@ -1,8 +1,8 @@
-<?php namespace SampleNamespace;
+<?php namespace DummyNamespace;
 
 use Illuminate\Database\Eloquent\Model;
 
-class SampleClass extends Model {
+class DummyClass extends Model {
 
 	//
 

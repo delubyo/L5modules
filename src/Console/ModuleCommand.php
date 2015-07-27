@@ -144,15 +144,15 @@ class ModuleCommand extends GeneratorCommand {
 
 	protected function replaceName(&$stub, $name)
 	{
-		$stub = str_replace('SampleTitle', $name, $stub);
-		$stub = str_replace('SampleUCtitle', ucfirst($name), $stub);
+		$stub = str_replace('DummyTitle', $name, $stub);
+		$stub = str_replace('DummyUCtitle', ucfirst($name), $stub);
 		return $this;
 	}
 
 	protected function replaceClass($stub, $name)
 	{
 		$class = str_ireplace($this->getNamespace($name).'\\', '', $name);
-		return str_replace('SampleClass', $class, $stub);
+		return str_replace('DummyClass', $class, $stub);
 	}		
 
 	protected function getStub()

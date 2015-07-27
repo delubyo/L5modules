@@ -1,11 +1,11 @@
-<?php namespace SampleNamespace;
+<?php namespace DummyNamespace;
 
-use SampleRootNamespaceHttp\Requests;
-use SampleRootNamespaceHttp\Controllers\Controller;
+use DummyRootNamespaceHttp\Requests;
+use DummyRootNamespaceHttp\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class SampleClass extends Controller {
+class DummyClass extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -14,7 +14,7 @@ class SampleClass extends Controller {
 	 */
 	public function index()
 	{
-		return view("SampleTitle::index");
+		return view("DummyTitle::index");
 	}
 
 	/**
