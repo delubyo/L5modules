@@ -3,7 +3,7 @@
     "description": "Laravel 5 Modular implementation",
     "keywords" : ["laravel", "l5modules", "artisan", "generator"],
     "license": "MIT",
-    "version": "1.0",    
+    "version": "1.0.1",    
     "authors": [
         {
             "name": "delubyo",
