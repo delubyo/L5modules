@@ -1,0 +1,23 @@
+{
+    "name": "delubyo/l5modules",
+    "description": "Laravel 5 Modular implementation",
+    "keywords" : ["laravel", "l5modules", "artisan", "generator"],
+    "license": "MIT",
+    "version": "1.0",    
+    "authors": [
+        {
+            "name": "delubyo",
+            "email": "albert.rosete@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.4.0",
+        "laravel/framework": ">=5.1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "delubyo\\L5modules\\": "src/"
+        }
+    },    
+}

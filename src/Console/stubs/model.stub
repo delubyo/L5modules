@@ -1,0 +1,9 @@
+<?php namespace SampleNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+
+class SampleClass extends Model {
+
+	//
+
+}

@@ -1,0 +1,3 @@
+<?php
+
+echo trans('SampleTitle::example.welcome');
