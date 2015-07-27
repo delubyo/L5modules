@@ -115,7 +115,7 @@ class ModuleCommand extends GeneratorCommand {
 				break;
 		}
 
-		$folder = ($type != 'routes') ? ucfirst($type).'s\\'. ($type === 'translation' ? 'en\\':'') : '';
+		$folder = ($type != 'routes') ? ucfirst($type).'s\\'. ($type === 'translation' ? 'en\\':'') : 'Http\\';
 
 		if ($type=='config') $folder = 'Config\\';		
 

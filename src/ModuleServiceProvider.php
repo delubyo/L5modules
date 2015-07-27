@@ -13,7 +13,7 @@ class ModuleServiceProvider extends ServiceProvider
 
             foreach($modules as $module)  {
                 
-                $routes = app_path().'/Modules/'.$module.'/routes.php';
+                $routes = app_path().'/Modules/'.$module.'/Http/routes.php';
                 $views  = app_path().'/Modules/'.$module.'/Views';
                 $trans  = app_path().'/Modules/'.$module.'/Translations';
 
