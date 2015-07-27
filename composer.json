@@ -19,5 +19,5 @@
         "psr-4": {
             "delubyo\\L5modules\\": "src/"
         }
-    },    
+    }    
 }
