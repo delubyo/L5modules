@@ -9,7 +9,7 @@ class ModuleServiceProvider extends ServiceProvider
 
     protected $commands = [
         'delubyo\L5modules\Console\ModuleCommand'
-    ]    
+    ];    
 
     public function boot()
     {
