@@ -7,6 +7,10 @@ class ModuleServiceProvider extends ServiceProvider
 {
     protected $files;
 
+    protected $commands = [
+        'delubyo\L5modules\Console\ModuleCommand'
+    ]    
+
     public function boot()
     {
         $modules = (config("modules.list")) ?: array_map('class_basename', $this->files->directories(app_path().'/Modules/'));
@@ -36,5 +40,6 @@ class ModuleServiceProvider extends ServiceProvider
     public function register()
     {
         $this->files = new Filesystem;
+        $this->commands($this->commands);
     }
 }

@@ -33,8 +33,3 @@ Update your project's `composer.json`
         }
     }
 ```
-
-#### Update \app\console\Kernel.php
-```
-\delubyo\L5modules\Console\ModuleCommand::class,
-```
