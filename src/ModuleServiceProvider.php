@@ -13,6 +13,8 @@ class ModuleServiceProvider extends ServiceProvider
 
     public function boot()
     {
+        if (!$this->files->exists(app_path().'/Modules/')) mkdir(app_path().'/Modules/');
+        
         $modules = (config("modules.list")) ?: array_map('class_basename', $this->files->directories(app_path().'/Modules/'));
 
             foreach($modules as $module)  {
