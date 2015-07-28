@@ -14,7 +14,7 @@ class ModuleServiceProvider extends ServiceProvider
     public function boot()
     {
         if (!$this->files->exists(app_path().'/Modules/')) mkdir(app_path().'/Modules/');
-        
+
         $modules = (config("modules.list")) ?: array_map('class_basename', $this->files->directories(app_path().'/Modules/'));
 
             foreach($modules as $module)  {
@@ -27,14 +27,14 @@ class ModuleServiceProvider extends ServiceProvider
                 if($this->files->isDirectory($views)) $this->loadViewsFrom($views, $module);
                 if($this->files->isDirectory($trans)) $this->loadTranslationsFrom($trans, $module);
 
-                $config = app_path().'/Modules/'.$module.'/config/config.php';
-                if($this->files->exists($config))  
-                {
-                    //add config files
+                //load multiple config files inside config folder
+                $config_files = array_map('class_basename', $this->files->files(app_path().'/Modules/'.$module.'/config/'));
+                foreach($config_files as $config_file)  {
+                    $fname = basename($config_file, ".php");
                     $this->mergeConfigFrom(
-                        app_path().'/Modules/'.$module.'/config/config.php', 'mod-'.$module
-                    );
-                }
+                        app_path().'/Modules/'.$module.'/config/'.$config_file, 'mod-'.$fname
+                    );                    
+                }                
 
             }
     }
